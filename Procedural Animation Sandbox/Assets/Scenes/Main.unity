@@ -475,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeadBone: {fileID: 1499417450}
   LookAtTarget: {fileID: 1761553982}
+  LookAtSpeed: 5
 --- !u!1 &2000857324
 GameObject:
   m_ObjectHideFlags: 0
