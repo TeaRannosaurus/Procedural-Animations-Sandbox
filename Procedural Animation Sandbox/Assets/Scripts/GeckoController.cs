@@ -4,19 +4,38 @@ using UnityEngine;
 
 public class GeckoController : MonoBehaviour
 {
-
+    
+    //Transforms
     [SerializeField] private Transform HeadBone;
     [SerializeField] private Transform LookAtTarget;
+
+    //Floats
+    [SerializeField] private float LookAtSpeed;
 
 
     void Start()
     {
-        
+        if (HeadBone == null)
+            Debug.LogError("Head is not set in gecko class animations cannot play\n", this);
+        if (LookAtTarget == null)
+            Debug.LogError("No target to look at for gecko. Lookat animations cannot play\n", this);
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector3 towardsObjectFromHead = LookAtTarget.position - HeadBone.position;
-        HeadBone.rotation = Quaternion.LookRotation(towardsObjectFromHead, transform.up);
+
+        Quaternion targetRoation = Quaternion.LookRotation(
+            towardsObjectFromHead,
+            transform.up
+            );
+
+        HeadBone.rotation = Quaternion.Slerp(
+            HeadBone.rotation,
+            targetRoation,
+            1.0f - Mathf.Exp(-LookAtSpeed * Time.deltaTime)
+            );
+
+
     }
 }
