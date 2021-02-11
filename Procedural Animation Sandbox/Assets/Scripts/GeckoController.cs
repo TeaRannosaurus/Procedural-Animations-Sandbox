@@ -13,7 +13,7 @@ public class GeckoController : MonoBehaviour
     [SerializeField] private float LookAtSpeed;
 
 
-    void Start()
+    private void Start()
     {
         if (HeadBone == null)
             Debug.LogError("Head is not set in gecko class animations cannot play\n", this);
@@ -21,7 +21,14 @@ public class GeckoController : MonoBehaviour
             Debug.LogError("No target to look at for gecko. Lookat animations cannot play\n", this);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
+    {
+        UpdateHead();
+        UpdateEyes();
+    }
+
+    //Head rotation
+    private void UpdateHead()
     {
         Vector3 towardsObjectFromHead = LookAtTarget.position - HeadBone.position;
 
@@ -35,7 +42,10 @@ public class GeckoController : MonoBehaviour
             targetRoation,
             1.0f - Mathf.Exp(-LookAtSpeed * Time.deltaTime)
             );
+    }
 
+    private void UpdateEyes()
+    {
 
     }
 }
