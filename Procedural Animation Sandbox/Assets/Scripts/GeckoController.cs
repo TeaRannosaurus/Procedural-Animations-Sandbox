@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class GeckoController : MonoBehaviour
 {
-    
-    //Transforms
+    //Head variables
     [SerializeField] private Transform HeadBone;
     [SerializeField] private Transform LookAtTarget;
-
-    //Floats
     [SerializeField] private float LookAtSpeed;
 
+    //Eyes variables
+    [SerializeField] private Transform LeftEye;
+    [SerializeField] private Transform RightEye;
+    [SerializeField] private float EyeLookAtSpeed;
+    [SerializeField] private float LeftEyeMaxYRotation;
+    [SerializeField] private float LeftEyeMinYRotation;
+    [SerializeField] private float RightEyeMaxYRotation;
+    [SerializeField] private float RightEyeMinYRotation;
 
     private void Start()
     {
@@ -32,20 +37,38 @@ public class GeckoController : MonoBehaviour
     {
         Vector3 towardsObjectFromHead = LookAtTarget.position - HeadBone.position;
 
-        Quaternion targetRoation = Quaternion.LookRotation(
+        Quaternion targetRotation = Quaternion.LookRotation(
             towardsObjectFromHead,
             transform.up
             );
 
         HeadBone.rotation = Quaternion.Slerp(
             HeadBone.rotation,
-            targetRoation,
+            targetRotation,
             1.0f - Mathf.Exp(-LookAtSpeed * Time.deltaTime)
             );
     }
 
     private void UpdateEyes()
     {
+        // Local eye position
+        Quaternion targetEyeRotation = Quaternion.LookRotation(
+            LookAtTarget.position - HeadBone.position,
+            transform.up
+            );
 
+        //Left eye
+        LeftEye.rotation = Quaternion.Slerp(
+            LeftEye.rotation,
+            targetEyeRotation,
+            1.0f - Mathf.Exp(-EyeLookAtSpeed * Time.deltaTime)
+            );
+
+        //Right eye
+        RightEye.rotation = Quaternion.Slerp(
+            RightEye.rotation,
+            targetEyeRotation,
+            1.0f - Mathf.Exp(-EyeLookAtSpeed * Time.deltaTime)
+            );
     }
 }
