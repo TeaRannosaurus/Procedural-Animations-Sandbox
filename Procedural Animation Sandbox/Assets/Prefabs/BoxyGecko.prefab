@@ -6502,13 +6502,14 @@ MonoBehaviour:
   HeadBone: {fileID: 4948314863792871198}
   LookAtTarget: {fileID: 0}
   LookAtSpeed: 2.5
+  MaxHeadTurnAngle: 45
   LeftEye: {fileID: 4948314863792871222}
   RightEye: {fileID: 4948314863792871216}
   EyeLookAtSpeed: 5
-  LeftEyeMaxYRotation: 0
-  LeftEyeMinYRotation: 0
-  RightEyeMaxYRotation: 0
-  RightEyeMinYRotation: 0
+  LeftEyeMaxYRotation: 45
+  LeftEyeMinYRotation: -90
+  RightEyeMaxYRotation: 90
+  RightEyeMinYRotation: -45
 --- !u!1 &4948314863793294206
 GameObject:
   m_ObjectHideFlags: 0
