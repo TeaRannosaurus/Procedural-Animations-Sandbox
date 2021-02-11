@@ -70,5 +70,43 @@ public class GeckoController : MonoBehaviour
             targetEyeRotation,
             1.0f - Mathf.Exp(-EyeLookAtSpeed * Time.deltaTime)
             );
+
+        ///Clamp eye rotation
+        float leftEyeCurrentYRotation = LeftEye.localEulerAngles.y;
+        float rightEyeCurrentYRotation = RightEye.localEulerAngles.y;
+
+        if(leftEyeCurrentYRotation > 180.0f)
+        {
+            leftEyeCurrentYRotation -= 360;
+        }
+        if(rightEyeCurrentYRotation > 180.0f)
+        {
+            rightEyeCurrentYRotation -= 360;
+        }
+
+        // Clamping Y rotation
+        float leftEyeClampedYRotation = Mathf.Clamp(
+            leftEyeCurrentYRotation,
+            LeftEyeMinYRotation,
+            LeftEyeMaxYRotation
+            );
+         float rightEyeClampedYRotation = Mathf.Clamp(
+            rightEyeCurrentYRotation,
+            RightEyeMinYRotation,
+            RightEyeMaxYRotation
+            );
+
+        // Apply clamp
+        LeftEye.localEulerAngles = new Vector3(
+            LeftEye.localEulerAngles.x,
+            leftEyeClampedYRotation,
+            LeftEye.localEulerAngles.z
+            );
+        RightEye.localEulerAngles = new Vector3(
+            RightEye.localEulerAngles.x,
+            rightEyeClampedYRotation,
+            RightEye.localEulerAngles.z
+            );
+
     }
 }
