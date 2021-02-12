@@ -92,5 +92,13 @@ public class InverseKinematics : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, Target.position);
 
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(SecondBone.position, Pole.position);
+
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(FirstBone.position, SecondBone.position);
+        Gizmos.DrawLine(SecondBone.position, ThridBone.position);
+
     }
 }

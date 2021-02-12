@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HomeLocation: {fileID: 760930469}
   MaxStepDistance: 0.6
-  MoveDuration: 0.125
+  MoveDuration: 5
   IsMoving: 0
 --- !u!1 &759361135
 GameObject:
@@ -228,12 +228,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760930468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.194, y: 0.139, z: 0.926}
+  m_LocalRotation: {x: 0.5753484, y: 0.42101324, z: 0.65118885, w: 0.26014456}
+  m_LocalPosition: {x: 0.49004257, y: -0.162, z: 0.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4948314863792871174}
-  m_RootOrder: 2
+  m_Father: {fileID: 4948314863792871184}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913185122
 GameObject:
@@ -305,12 +305,42 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072674575}
-  m_LocalRotation: {x: -0.20259856, y: 0.14565216, z: 0.9683695, w: -0.00000008940696}
-  m_LocalPosition: {x: 0.18891045, y: -0.13581198, z: -0.90294296}
+  m_LocalRotation: {x: 0.5753484, y: 0.42101324, z: 0.65118885, w: 0.26014456}
+  m_LocalPosition: {x: -0.46621752, y: -0.162, z: 0.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4948314863792871168}
-  m_RootOrder: 2
+  m_Father: {fileID: 4948314863792871184}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1159544363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1159544364}
+  m_Layer: 0
+  m_Name: LegPole_F_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1159544364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159544363}
+  m_LocalRotation: {x: 0.05248138, y: 0.984431, z: -0.13285775, w: 0.10242091}
+  m_LocalPosition: {x: 1.636, y: -0.175, z: 0.805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4948314863792871214}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224841146
 GameObject:
@@ -357,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HomeLocation: {fileID: 1072674576}
   MaxStepDistance: 0.6
-  MoveDuration: 0.125
+  MoveDuration: 5
   IsMoving: 0
 --- !u!1 &1629306329
 GameObject:
@@ -388,6 +418,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4948314863792871178}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1955392026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955392027}
+  m_Layer: 0
+  m_Name: LegPole_F_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1955392027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955392026}
+  m_LocalRotation: {x: 0.05248138, y: 0.984431, z: -0.13285775, w: 0.10242091}
+  m_LocalPosition: {x: -1.457, y: -0.175, z: 0.805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4948314863792871214}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084296463
 GameObject:
@@ -5759,6 +5819,8 @@ Transform:
   - {fileID: 2336754592083563835}
   - {fileID: 759361136}
   - {fileID: 2097461795}
+  - {fileID: 1955392027}
+  - {fileID: 1159544364}
   m_Father: {fileID: 4948314863792871192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6483,6 +6545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4948314863792871168}
+  - component: {fileID: 692124340}
   m_Layer: 0
   m_Name: Thigh_F_R
   m_TagString: Untagged
@@ -6503,10 +6566,30 @@ Transform:
   m_Children:
   - {fileID: 4948314863792871202}
   - {fileID: 2336754592160130137}
-  - {fileID: 1072674576}
   m_Father: {fileID: 4948314863792871184}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692124340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948314863793294176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f488b4e50411c7b419698a89d6cf11f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 476073739}
+  Pole: {fileID: 1159544364}
+  FirstBone: {fileID: 4948314863792871168}
+  FirstBoneEulerAngleOffset: {x: 0, y: 0, z: 0}
+  SecondBone: {fileID: 4948314863792871202}
+  SecondBoneEulerAngleOffset: {x: 0, y: 0, z: 90}
+  ThridBone: {fileID: 4948314863792871220}
+  ThirdBoneEulerAngleOffset: {x: 90, y: 90, z: 0}
+  AllignThridBoneWithTargetRotation: 1
 --- !u!1 &4948314863793294178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6600,6 +6683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4948314863792871174}
+  - component: {fileID: 803315901}
   m_Layer: 0
   m_Name: Thigh_F_L
   m_TagString: Untagged
@@ -6620,10 +6704,30 @@ Transform:
   m_Children:
   - {fileID: 4948314863792871200}
   - {fileID: 2336754593216468359}
-  - {fileID: 760930469}
   m_Father: {fileID: 4948314863792871184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803315901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948314863793294182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f488b4e50411c7b419698a89d6cf11f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1224841147}
+  Pole: {fileID: 1955392027}
+  FirstBone: {fileID: 4948314863792871174}
+  FirstBoneEulerAngleOffset: {x: 0, y: 180, z: 180}
+  SecondBone: {fileID: 4948314863792871200}
+  SecondBoneEulerAngleOffset: {x: 0, y: 180, z: 90}
+  ThridBone: {fileID: 4948314863792871226}
+  ThirdBoneEulerAngleOffset: {x: -90, y: -90, z: 0}
+  AllignThridBoneWithTargetRotation: 1
 --- !u!1 &4948314863793294184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6703,11 +6807,11 @@ MonoBehaviour:
   Target: {fileID: 185065760}
   Pole: {fileID: 2097461795}
   FirstBone: {fileID: 4948314863792871178}
-  FirstBoneEulerAngleOffset: {x: 0, y: 0, z: 0}
+  FirstBoneEulerAngleOffset: {x: 0, y: 180, z: 90}
   SecondBone: {fileID: 4948314863792871204}
-  SecondBoneEulerAngleOffset: {x: 0, y: 0, z: 0}
+  SecondBoneEulerAngleOffset: {x: 0, y: 180, z: 0}
   ThridBone: {fileID: 4948314863792871230}
-  ThirdBoneEulerAngleOffset: {x: 0, y: 0, z: 0}
+  ThirdBoneEulerAngleOffset: {x: -90, y: -90, z: 0}
   AllignThridBoneWithTargetRotation: 1
 --- !u!1 &4948314863793294188
 GameObject:
@@ -6806,6 +6910,8 @@ Transform:
   - {fileID: 2336754592590669440}
   - {fileID: 2336754591757905643}
   - {fileID: 2336754591387866942}
+  - {fileID: 1072674576}
+  - {fileID: 760930469}
   m_Father: {fileID: 4948314863792871190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

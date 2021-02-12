@@ -55,9 +55,9 @@ public class LegController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         if (IsMoving)
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.red; //Is in incorrect pos
         else
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.green; //Is in correct pos
 
         Gizmos.DrawWireSphere(transform.position, 0.25f);
         Gizmos.DrawLine(transform.position, HomeLocation.position);
