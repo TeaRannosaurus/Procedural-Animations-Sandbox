@@ -129,4 +129,12 @@ public class GeckoController : MonoBehaviour
             );
 
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(HeadBone.position, LookAtTarget.position);
+        Gizmos.DrawLine(LeftEye.position, LookAtTarget.position);
+        Gizmos.DrawLine(RightEye.position, LookAtTarget.position);
+    }
 }

@@ -85,7 +85,7 @@ public class InverseKinematics : MonoBehaviour
 
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         if (!IsSetUp()) return;
 
